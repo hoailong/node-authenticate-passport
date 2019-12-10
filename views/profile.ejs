@@ -1,0 +1,50 @@
+<%- include('partials/header.ejs'); -%>
+<div class="page-header text-center">
+    <h1><span class="fa fa-anchor"></span> Profile Page</h1>
+    <a href="/logout" class="btn btn-danger btn-sm">Logout</a>
+</div>
+<div class="row" style="margin-top: 20px">
+    <div class="col-sm-6">
+        <div class="card card-body bg-light">
+            <h3 class="text-warning"><span class="fa fa-laptop"></span> Local</h3>
+            <p>
+                <strong>id</strong>: <%= type === 'local' ? user._id : '' %><br/>
+                <strong>email</strong>: <%= type === 'local' ? user.local.email : ''  %><br/>
+                <strong>password</strong>: <%= type === 'local' ? user.local.password : '' %><br/>
+            </p>
+        </div>
+    </div>
+    <div class="col-sm-6">
+        <div class="card card-body bg-light">
+            <h3 class="text-primary"><span class="fa fa-facebook"></span> Facebook</h3>
+            <p>
+                <strong>id</strong>: <%= type === 'facebook' ? user.facebook.id : '' %><br/>
+                <strong>email</strong>: <%= type === 'facebook' ? user.facebook.email : '' %><br/>
+                <strong>name</strong>: <%= type === 'facebook' ? user.facebook.name : '' %><br/>
+            </p>
+        </div>
+    </div>
+</div>
+<div class="row" style="margin-top: 20px">
+    <div class="col-sm-6">
+        <div class="card card-body bg-light">
+            <h3 class="text-info"><span class="fa fa-twitter"></span> Twitter</h3>
+            <p>
+                <strong>id</strong>: <%= type === 'twitter' ? user.twitter.id : '' %><br/>
+                <strong>email</strong>: <%= type === 'twitter' ? user.twitter.email : '' %><br/>
+                <strong>name</strong>: <%= type === 'twitter' ? user.twitter.name : '' %><br/>
+            </p>
+        </div>
+    </div>
+    <div class="col-sm-6">
+        <div class="card card-body bg-light">
+            <h3 class="text-danger"><span class="fa fa-google"></span> Google</h3>
+            <p>
+                <strong>id</strong>: <%= type === 'google' ? user.google.id : '' %><br/>
+                <strong>email</strong>: <%= type === 'google' ? user.google.email : '' %><br/>
+                <strong>name</strong>: <%= type === 'google' ? user.google.name : '' %><br/>
+            </p>
+        </div>
+    </div>
+</div>
+<%- include('partials/footer.ejs'); -%>
